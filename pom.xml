@@ -17,12 +17,12 @@
     <version>2.2.5</version>
 </dependency>
 </dependencies>
-	
- <build>
+
+<build>
     <plugins>
         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>jaxb2-maven-plugin</artifactId>
+            <groupId>org.jvnet.jaxb2.maven2</groupId>
+            <artifactId>maven-jaxb2-plugin</artifactId>
             <executions>
                 <execution>
                     <goals>
@@ -31,15 +31,12 @@
                 </execution>
             </executions>
             <configuration>
-                <!-- The schema directory or xsd files. -->
-                <schemaDirectory>${basedir}/src/main/resources</schemaDirectory>
-                <!-- The package in which the source files will be generated. -->
-                <packageName>org.sirmes</packageName>
-                <!-- The working directory to create the generated java source files. -->
-                <outputDirectory>${basedir}/src/main/java</outputDirectory>
+                <generateDirectory>${basedir}/generated-sources/</generateDirectory>
+                <generatePackage>org.sirmes</generatePackage>
             </configuration>
         </plugin>
     </plugins>
-  </build>
-	
+</build>
+
+
 </project>

@@ -1,0 +1,10 @@
+
+###Quick start
+
+```sh
+mvn clean compile
+```
+
+This will generate the source code inside dir **${basedir}/generated-sources/**.
+
+
